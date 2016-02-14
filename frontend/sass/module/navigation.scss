@@ -1,0 +1,142 @@
+.page-navigation {
+    font-size: 1em;
+    font-family: $serif;
+    position: absolute;
+    right: 1em;
+    top: 1.375em;
+    z-index: 1;
+
+    .no-touch & {
+        &:hover {
+            .menu-container {
+                display: block;
+            }
+        }
+    }
+
+    .toggle {
+        box-sizing: content-box;
+        cursor: pointer;
+        padding: .75em;
+        position: relative;
+        width: 1.250em;
+
+        &:before,
+        &:after,
+        span {
+            background: $pure-white;
+            display: block;
+            height: .250em;
+            margin: 0 0 .250em;
+        }
+
+        &:before,
+        &:after {
+            content: ''
+        }
+
+        &:after {
+            margin-bottom: 0;
+        }
+    }
+
+    .menu-container {
+        display: none;
+        padding: 3.375em 0 0;
+        position: absolute;
+        right: -1em;
+        width: 13.750em;
+
+        &:before {
+            border-bottom: 1.063em solid $black;
+            border-left: .938em solid transparent;
+            border-right: .938em solid transparent;
+            content: '';
+            height: 0;
+            position: absolute;
+            right: 1.5em;
+            top: 2.313em;
+            width: 0;
+        }
+    }
+
+    .menu {
+        border-radius: .188em;
+        box-shadow: 2px 2px 6px rgba($pure-black, .2);
+        overflow: hidden;
+    }
+
+    .menu-item {
+        background: $black;
+        border-bottom: 1px solid rgba($pure-white, .05);
+        color: $pure-white;
+        display: block;
+        padding: .938em 0 .938em 1.250em;
+
+        &:hover {
+            background: $accent;
+            color: $black;
+        }
+    }
+}
+
+@media screen and (max-width: $max-width) {
+    .page-navigation {
+        .menu-container {
+            right: -.375em;
+
+            &:before {
+                top: 2.429em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $ipad-width) {
+    .page-navigation {
+
+        .toggle {
+            width: 1.429em;
+        }
+
+        .menu-container {
+            width: 15.714em;
+
+            &:before {
+                right: 1em;
+            }
+        }
+
+        .menu {
+            border-radius: .214em;
+        }
+
+        .menu-item {
+            font-size: 1.143em;
+        }
+    }
+}
+
+@media screen and (max-width: $iphone-width) {
+    .page-navigation {
+        .toggle {
+            width: 1.2rem;
+        }
+
+        .menu-container {
+            width: 22em;
+
+            &:before {
+                right: 1.5em;
+            }
+        }
+
+        .menu {
+            border-radius: .3em;
+        }
+
+        .menu-item {
+            font-size: 1.600em;
+        }
+    }
+}

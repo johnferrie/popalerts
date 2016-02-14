@@ -1,0 +1,39 @@
+.filter {
+    border: 1px solid rgba($pure-black, .11);
+    border-radius: .278em;
+    display: flex;
+    font-size: 1.125em;
+    max-width: 23.333em;
+    margin: 0 auto 1.667em;
+    overflow: hidden;
+    text-align: center;
+
+    li {
+        background: rgba($pure-black, .03);
+        height: 2.667em;
+        letter-spacing: .02em;
+        line-height: 2.667em;
+        width: 50%;
+
+        a {
+            background: $pure-white;
+            color: rgba($black, .28);
+            display: block;
+            height: 100%;
+
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 420px) {
+    .filter {
+        margin-left: 1em;
+        margin-right: 1em;
+        max-width: none;
+        width: auto;
+    }
+}

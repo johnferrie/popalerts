@@ -1,0 +1,28 @@
+.pagination {
+    @extend %clearfix;
+    border-top: 1px solid rgba($pure-black, .08);
+    padding: 1.343em 1.875em;
+
+    .js & {
+        display: none;
+    }
+
+    a {
+        background: $black;
+        border-radius: 1em;
+        color: $white;
+        font-family: $walsheim;
+        font-size: 1.250em;
+        font-style: italic;
+        padding: .5em 2rem;
+        text-transform: uppercase;
+    }
+
+    &-prev {
+        float: left;
+    }
+
+    &-next {
+        float: right;
+    }
+}

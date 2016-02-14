@@ -1,0 +1,66 @@
+<form method="post" action="/search" class="search">
+    <input type="text" name="search" class="search-term" placeholder="Find alerts" value={{term}}>
+    <button type="submit" class="search-submit">
+        <span class="search-icon"></span>
+    </button>
+</form>
+
+<section class="people">
+    <ul class="filter">
+        <li>
+            {{#if favorite}}
+                <a href="/">
+            {{/if}}
+                Popular Alerts
+            {{#if favorite}}
+                </a>
+            {{/if}}
+        </li>
+        <li>
+            {{#unless favorite}}
+                <a href="/favorites">
+            {{/unless}}
+                Your Alerts
+            {{#unless favorite}}
+                </a>
+            {{/unless}}
+        </li>
+    </ul>
+    {{#if currentPage}}
+        <div class="page" data-url="/page/{{currentPage}}">
+    {{else}}
+        <div class="page" data-url="/">
+    {{/if}}
+        <ul class="people-collection">
+            {{#each people}}
+                <li class="person" data-id="{{this._id}}">
+                    <div class="person-name">
+                        {{this.full_name}}
+                    </div>
+
+                    <div class="person-actions">
+                        <a href="#" class="person-edit">Edit</a>
+                        <a href="#" class="person-save is-hidden">Save</a>
+                        <a href="#" class="person-delete is-hidden">Delete</a>
+                    </div>
+                </li>
+            {{else}}
+                {{#if term}}
+                    <li class="is-empty">
+                        Sorry, I did not find anyone by <em>{{term}}<em>. Click here to add it <a href="/search/add/{{term}}">{{term}}</a>.
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ul>
+        {{#if people}}
+            <div class="pagination">
+                {{#if prev}}
+                    <a href="/page/{{prev}}" class="pagination-prev">Previous</a>
+                {{/if}}
+                {{#if next}}
+                    <a href="/page/{{next}}" class="pagination-next">Next</a>
+                {{/if}}
+            </div>
+        {{/if}}
+    </div>
+</section>

@@ -1,0 +1,4 @@
+.inverted {
+    background: invert($white);
+    filter: invert(100%);
+}

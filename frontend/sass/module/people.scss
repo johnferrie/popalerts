@@ -1,0 +1,99 @@
+.people {
+    background: $pure-white;
+    border-radius: .188em;
+    box-shadow: 1px 1px 0 0 rgba(#000, .05);
+    padding: 1.875em 0 0;
+
+    .person {
+        display: flex;
+        font-size: 1.750em;
+        padding: 0 1.071em;
+        transition: background 300ms linear;
+
+        &:first-child {
+            border-top: 1px solid rgba($pure-black, .08);
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba($pure-black, .08);
+        }
+
+        &-name {
+            flex: 2;
+            padding: 1.036em 0 1em;
+
+            &[contenteditable="true"] {
+                color: $accent;
+                outline: 0;
+            }
+        }
+
+        &-actions {
+            display: none;
+            flex: 1;
+            font-size: .5em;
+            padding: 2.5em 0 0;
+            text-align: right;
+
+            .js & {
+                display: block;
+            }
+
+            a {
+                background: $white;
+                border-radius: 1.429em;
+                color: $black;
+                font-family: $walsheim;
+                letter-spacing: .1em;
+                padding: .786em 1.857em;
+                text-transform: uppercase;
+
+                &:hover {
+                    background: $accent;
+                    color: $black;
+                }
+            }
+
+        }
+
+        &-edit {
+
+        }
+
+        &-save {
+            margin: 0 .714em 0 0;
+        }
+
+        &-delete {
+
+        }
+    }
+
+    .is-empty {
+        em {
+            font-style: italic;
+        }
+
+        a {
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: $ipad-width) {
+    .people {
+        .person {
+
+            &-name {
+                flex: 1;
+            }
+
+            &-actions {
+                a {
+                    padding-left: 1.2em;
+                    padding-right: 1.2em;
+                }
+            }
+        }
+    }
+}

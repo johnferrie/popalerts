@@ -1,0 +1,10 @@
+//****************************************
+// Url helpers
+//****************************************
+@function image-url($image) {
+    @return url("#{$static_path}img/#{$image}");
+}
+
+@function font-url($font) {
+    @return url("#{$static_path}fonts/#{$font}");
+}

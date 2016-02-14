@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Pop Alerts</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+{{#if hasTheme}}
+    <body class="inverted">
+{{else}}
+    <body>
+{{/if}}
+    <header class="page-header">
+        <div class="container">
+            <h1><a href="/">Pop Alerts</a></h1>
+
+            <nav class="page-navigation">
+                <div class="toggle" id="toggle">
+                    <span></span>
+                </div>
+                <div class="menu-container">
+                    <ul class="menu">
+                        <li>
+                            <a href="/privacy" class="menu-item">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="/terms" class="menu-item">Terms of Use</a>
+                        </li>
+                        <li>
+                            <a id="toggle-theme" href="#" class="menu-item">Settings</a>
+                        </li>
+                        <li>
+                            <a href="/logout" class="menu-item">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{{body}}}
+    </main>
+
+    <footer class="page-footer">
+
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

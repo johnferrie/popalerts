@@ -1,0 +1,26 @@
+//****************************************
+// Clears floats.
+//****************************************
+%clearfix {
+    &:before,
+    &:after {
+        content: '.';
+        display: block;
+        font-size: 0;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+        width: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//****************************************
+// Image replacement
+//****************************************
+%ir {
+    font-size: 0;
+    text-indent: -9999em;
+}

@@ -1,0 +1,27 @@
+.static {
+    h2 {
+        font-family: $walsheim;
+        font-size: 1.8rem;
+        margin-top: 0;
+    }
+
+    p {
+        line-height: 1.4;
+    }
+}
+
+@media screen and (max-width: $ipad-width) {
+    .static {
+        p {
+            font-size: 1.143em;
+        }
+    }
+}
+
+@media screen and (max-width: $iphone-width) {
+    .static {
+        p {
+            font-size: 1.6em;
+        }
+    }
+}

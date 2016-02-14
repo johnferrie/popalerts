@@ -1,0 +1,22 @@
+.is-editable {
+    background: $black;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.is-open {
+    display: block !important;
+}
+
+.is-empty {
+    font-family: $walsheim;
+    font-size: 1.2em;
+    padding: 0 0 2em;
+    text-align: center;
+}
+
+.is-saved {
+    background: $success;
+}

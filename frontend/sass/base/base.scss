@@ -1,0 +1,63 @@
+html {
+    box-sizing: border-box
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+body {
+    background: $white;
+    color: $black;
+    font-family: $serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    margin: 0 auto 30px; // TODO: switch to em.
+    max-width: $max-width;
+
+    > section {
+        background: $pure-white;
+        padding: 1.875em;
+    }
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+    transition: all 200ms linear;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+input,
+button {
+    background: none;
+    border: 0;
+}
+
+@media screen and (max-width: $max-width) {
+    main {
+        margin-left: .625em;
+        margin-right: .625em;
+    }
+}
+
+@media screen and (max-width: $ipad-width) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: $iphone-width) {
+    body {
+        font-size: 10px;
+    }
+}

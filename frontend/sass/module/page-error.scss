@@ -1,0 +1,25 @@
+.page-error {
+    text-align: center;
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        font-weight: bold;
+        font-style: italic;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+}

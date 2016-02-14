@@ -1,0 +1,25 @@
+.page-header {
+    background: $black;
+    margin: 0 0 1.875em;
+
+    .container {
+        align-items: center;
+        display: flex;
+        font-family: $walsheim;
+        height: 5.625em;
+        justify-content: center;
+    }
+
+    h1 {
+        color: $pure-white;
+        font-size: 2.063em;
+        letter-spacing: .07em;
+        margin: 0;
+        padding: 0 0 .091em;
+        text-transform: uppercase;
+    }
+
+    a {
+        color: inherit;
+    }
+}
